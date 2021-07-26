@@ -2,10 +2,12 @@ using System;
 using System.Runtime.InteropServices ;
 using System.Threading;
 
-namespace ExtremeMirror
+namespace MountShare
 {
+	#Credits to example from http://lookfwd.doitforme.gr/blog/media/PinvokeWindowsNetworking.cs
 	public class PinvokeWindowsNetworking
 	{
+		
 		#region Consts
 		const int RESOURCE_CONNECTED = 0x00000001;
 		const int RESOURCE_GLOBALNET = 0x00000002;
@@ -70,10 +72,7 @@ namespace ExtremeMirror
 				this.message = message;
 			}
 		}
-
-
-		// Created with excel formula:
-		// ="new ErrorClass("&A1&", """&PROPER(SUBSTITUTE(MID(A1,7,LEN(A1)-6), "_", " "))&"""), "
+		
 		private static ErrorClass[] ERROR_LIST = new ErrorClass[] {
 			new ErrorClass(ERROR_ACCESS_DENIED, "Error: Access Denied"), 
 			new ErrorClass(ERROR_ALREADY_ASSIGNED, "Error: Already Assigned"), 
